@@ -1,15 +1,12 @@
 ---
+import Hero from "../components/Hero.astro";
+import Layout from "../layouts/default.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class="bg-gray-900">
-    <h1 class="text-white">Hello, World!</h1>
-  </body>
-</html>
+<Layout>
+  <Hero />
+  <section class="container h-screen mx-auto">
+    <h1>Hello World</h1>
+  </section>
+  <section class="container h-screen mx-auto"></section>
+</Layout>

@@ -1,0 +1,63 @@
+---
+import StarField from "./StarField.astro";
+---
+
+<script>
+  const heroEl = document.querySelector("#hero") as HTMLElement;
+  const mainEl = document.querySelector("#main") as HTMLElement;
+  const heaerEl = document.querySelector("#header") as HTMLElement;
+
+  const headerHeight = heaerEl.offsetHeight;
+  mainEl.style.height = `calc(100vh - ${headerHeight}px)`;
+  heroEl.style.top = headerHeight - window.innerHeight + "px";
+
+  window.addEventListener("resize", () => {
+    mainEl.style.height = `calc(100vh - ${headerHeight}px)`;
+    heroEl.style.top = headerHeight - window.innerHeight + "px";
+  });
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    heaerEl.classList.toggle("header-top", scrollY > window.innerHeight);
+  });
+</script>
+
+<div id="hero" class="sticky bg-black">
+  <StarField />
+  <main
+    id="main"
+    class="flex relative flex-col justify-center items-center text-center h-screen"
+  >
+    <h1
+      class="text-6xl leading-normal font-bold bg-gradient-to-br bg-clip-text text-transparent from-red-500 to-purple-500"
+    >
+      👋 Hi I'm <br /> Shreyas Mididoddi!
+    </h1>
+    <hr class="w-full max-w-md border-gray-700 my-4" />
+    <p class="text-2xl font-medium text-gray-100">
+      🧑‍💻 Tech enthusiast and a Passionate web developer 🚀
+    </p>
+  </main>
+  <header
+    id="header"
+    class="border-b-2 border-gray-800 bg-gray-900/10 z-100 backdrop-blur-sm w-full max-h-min transition-all"
+  >
+    <div class="flex container mx-auto py-6">
+      <strong>Shreyas Mididoddi</strong>
+    </div>
+  </header>
+</div>
+
+<style>
+  .header-top {
+    @apply bg-gray-900/60;
+  }
+
+  h1 {
+    -webkit-background-clip: text;
+  }
+
+  h1::first-letter {
+    @apply text-white;
+  }
+</style>
