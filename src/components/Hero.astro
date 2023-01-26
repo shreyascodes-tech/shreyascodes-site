@@ -22,27 +22,27 @@ import StarField from "./StarField.astro";
   });
 </script>
 
-<div id="hero" class="sticky bg-black">
+<div id="hero" class="sticky z-50 bg-black fade-in">
   <StarField />
   <main
     id="main"
-    class="flex relative flex-col justify-center items-center text-center h-screen"
+    class="relative flex flex-col items-center justify-center h-screen text-center"
   >
     <h1
-      class="text-6xl leading-normal font-bold bg-gradient-to-br bg-clip-text text-transparent from-red-500 to-purple-500"
+      class="text-6xl font-bold leading-normal text-transparent uppercase bg-gradient-to-br bg-clip-text from-red-500 to-purple-500"
     >
       👋 Hi I'm <br /> Shreyas Mididoddi!
     </h1>
-    <hr class="w-full max-w-md border-gray-700 my-4" />
+    <hr class="w-full max-w-md my-4 border-gray-700" />
     <p class="text-2xl font-medium text-gray-100">
       🧑‍💻 Tech enthusiast and a Passionate web developer 🚀
     </p>
   </main>
   <header
     id="header"
-    class="border-b-2 border-gray-800 bg-gray-900/10 z-100 backdrop-blur-sm w-full max-h-min transition-all"
+    class="w-full transition-all border-b-2 border-gray-800 bg-gray-900/10 z-100 backdrop-blur-sm max-h-min"
   >
-    <div class="flex container mx-auto py-6">
+    <div class="container flex py-6 mx-auto">
       <strong>Shreyas Mididoddi</strong>
     </div>
   </header>
@@ -51,10 +51,6 @@ import StarField from "./StarField.astro";
 <style>
   .header-top {
     @apply bg-gray-900/60;
-  }
-
-  h1 {
-    -webkit-background-clip: text;
   }
 
   h1::first-letter {

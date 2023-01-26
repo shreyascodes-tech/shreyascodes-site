@@ -1,0 +1,50 @@
+---
+interface Props {
+  item: {
+    title: string;
+    subtitle: string;
+    description: string;
+    image: string;
+    link: string;
+    github: string;
+  };
+}
+
+const { item } = Astro.props;
+---
+
+<div
+  class="block shadow-md group outline-none overflow-hidden bg-gradient-to-br relative from-red-500/50 to-purple-500/50 hover:from-red-500 hover:to-purple-500 focus-within:from-red-500 focus-within:to-purple-500 p-[2px] max-w-lg w-full rounded aspect-video bg-gray-800 shadow"
+>
+  <img
+    src={item.image}
+    class="block w-full h-full transition-transform"
+    alt={item.title}
+  />
+
+  <div
+    class="scale-125 group-hover:scale-100 group-focus-within:scale-100 absolute inset-[2px] flex flex-col items-center justify-center transition-all opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 bg-black/80"
+  >
+    <strong class="text-2xl font-medium">
+      <span class="font-semibold text-sky-400">{item.title}</span>
+      {" • "}
+      {item.subtitle}
+    </strong>
+    <p class="text-sm font-medium text-gray-100 max-w-[40ch] mt-4">
+      {item.description}
+    </p>
+    <a
+      href={item.link}
+      class="mt-4 px-6 py-2 text-gray-100 border-2 border-current rounded text-sm uppercase font-bold bg-gray-50/0 hover:bg-gray-50/40 outline-none focus:bg-gray-50/40 transition-colors"
+    >
+      visit site
+    </a>
+  </div>
+  <div
+    class="absolute w-12 h-12 bottom-4 right-4 focus-within:ring ring-blue-700 rounded-lg outline-none opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity hover:opacity-100 focus:opacity-100"
+  >
+    <a href={item.github} class="outline-none">
+      <img src="/img/github_logo.svg" alt="" />
+    </a>
+  </div>
+</div>
