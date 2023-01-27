@@ -12,6 +12,7 @@ import StarField from "./StarField.astro";
   heroEl.style.top = headerHeight - window.innerHeight + "px";
 
   window.addEventListener("resize", () => {
+    const headerHeight = heaerEl.offsetHeight;
     mainEl.style.height = `calc(100vh - ${headerHeight}px)`;
     heroEl.style.top = headerHeight - window.innerHeight + "px";
   });

@@ -2,46 +2,8 @@
 import Hero from "../components/Hero.astro";
 import ShowcaseCard from "../components/ShowcaseCard.astro";
 import Layout from "../layouts/default.astro";
-
-const showcaseItems = [
-  {
-    title: "Shreyas Mididoddi",
-    subtitle: "My Portfolio",
-    description:
-      "This is my portfolio website. I built it using Astro and TailwindCSS. This is the website you are currently on :)",
-    image: "/img/screenshots/portfolio.png",
-    link: "/",
-    github: "https://github.com/shreyascodes-tech/shreyascodes-site",
-  },
-  {
-    title: "Deserve",
-    subtitle: "A Deno server framework",
-    description:
-      "This is a Deno web framework that I made. It's a work in progress. I built the framework itself and also the doocs website using react and TailwindCSS.",
-    image: "/img/screenshots/deserve.jpeg",
-    link: "https://deserve.deno.dev/",
-    github: "https://github.com/shreyascodes-tech/deserve",
-  },
-  {
-    title: "Filledstacks",
-    subtitle: "The Flutter Framework for Production",
-    description:
-      "I built the website for Filledstacks. It's a Flutter framework that helps you build production ready apps. I built the homepage using react and TailwindCSS.",
-    image: "/img/screenshots/stacked.png",
-    link: "https://stacked.filledstacks.com/",
-    github: "https://github.com/Filledstacks/stacked",
-  },
-
-  {
-    title: "Hyh Music",
-    subtitle: "A Music app 🎵",
-    description:
-      "I built this website in a hackathon. It's a music streaming website. I built it using Astro and TailwindCSS",
-    image: "/img/screenshots/hyh-music.png",
-    link: "https://hyh-music.deno.dev/",
-    github: "https://github.com/shreyascodes-tech/hyh-music",
-  },
-];
+import Tools from "../components/Tools.svelte";
+import { showcaseItems } from "../shared";
 ---
 
 <Layout>
@@ -70,5 +32,22 @@ const showcaseItems = [
       }
     </div>
   </section>
-  <section class="container h-screen mx-auto"></section>
+  <div class="bg-gray-800">
+    <section
+      class="container flex flex-col items-center min-h-screen gap-16 justify-center px-4 py-8 mx-auto text-center"
+    >
+      <div>
+        <h2
+          class="text-5xl font-bold leading-normal text-transparent bg-gradient-to-br bg-clip-text from-red-500 to-purple-500"
+        >
+          I use tools
+        </h2>
+        <p class="text-xl font-medium text-gray-100">
+          to build websites that are fast, beautiful and easy to use
+        </p>
+      </div>
+
+      <Tools client:idle />
+    </section>
+  </div>
 </Layout>
