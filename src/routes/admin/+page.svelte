@@ -75,10 +75,12 @@
 							</button>
 						</form>
 					</summary>
-					<div class="div p-4 bg-gray-800/40">
+					<div class="p-4 bg-gray-800/40 overflow-y-visible flex flex-col">
 						<p class="font-bold">{item.email}</p>
 						<hr class="border-gray-700 my-3" />
-						<pre class="text-xl font-sans">{item.message}</pre>
+						{#each (item.message ?? '').split('\n') as line}
+							<p class="text-xl max-w-full">{line}</p>
+						{/each}
 					</div>
 				</details>
 			{/each}
