@@ -20,7 +20,7 @@
 <form
 	action="/contact"
 	method="post"
-	class="flex flex-col gap-6 w-full max-w-lg"
+	class="flex flex-col gap-4 w-full max-w-lg"
 	use:enhance={({ form: f }) => {
 		return ({ result }) => {
 			// @ts-ignore
@@ -41,14 +41,46 @@
 		</p>
 	{/if}
 
-	<input type="text" name="name" placeholder="Name" class="px-4 py-2 bg-gray-800 rounded-md" />
-	<input type="email" name="email" placeholder="Email" class="px-4 py-2 bg-gray-800 rounded-md" />
-	<textarea
-		name="message"
-		placeholder="Message"
-		rows="5"
-		class="px-4 py-2 bg-gray-800 rounded-md"
-	/>
+	<div class="flex flex-col gap-2">
+		<label for="name" class="self-start">Name</label>
+		<input
+			id="name"
+			type="text"
+			name="name"
+			placeholder="Name"
+			class="px-4 py-2 bg-gray-800 rounded-md"
+		/>
+	</div>
+	<div class="flex flex-col gap-2">
+		<label for="email" class="self-start">E-Mail</label>
+		<input
+			type="email"
+			id="email"
+			name="email"
+			placeholder="Email"
+			class="px-4 py-2 bg-gray-800 rounded-md"
+		/>
+	</div>
+	<div class="flex flex-col gap-2">
+		<label for="yu69hn" class="self-start">Favorite Color</label>
+		<input
+			type="text"
+			name="yu69hn"
+			id="yu69hn"
+			placeholder="I like purple :)"
+			class="px-4 py-2 bg-gray-800 rounded-md"
+		/>
+	</div>
+	<div class="flex flex-col gap-2">
+		<label for="email" class="self-start">Message</label>
+		<textarea
+			id="message"
+			name="message"
+			placeholder="Message"
+			rows="5"
+			class="px-4 py-2 bg-gray-800 rounded-md"
+		/>
+	</div>
 	<button
 		type="submit"
 		class="px-4 py-2 text-white bg-purple-700 transition-all hover:bg-purple-600 active:bg-purple-900 active:scale-95 outline-none focus:ring ring-offset-2 ring-offset-gray-900 ring-indigo-600 rounded-md"
