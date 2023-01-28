@@ -48,7 +48,7 @@
 	</main>
 	<header
 		id="header"
-		class="w-full transition-all border-b-2 border-gray-800 bg-gray-900/10 z-100 backdrop-blur-sm max-h-min"
+		class="w-full transition-all border-b-2 border-gray-800 bg-gray-900/10 z-100 backdrop-blur-sm max-h-min px-6 md:px-0"
 	>
 		<div class="container flex py-6 mx-auto">
 			<strong>Shreyas Mididoddi</strong>

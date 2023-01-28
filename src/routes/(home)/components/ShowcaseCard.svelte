@@ -10,9 +10,13 @@
 </script>
 
 <div
-	class="block group outline-none overflow-hidden bg-gradient-to-br relative from-red-500/50 to-purple-500/50 hover:from-red-500 hover:to-purple-500 focus-within:from-red-500 focus-within:to-purple-500 p-[2px] max-w-lg w-full rounded aspect-[16/10] bg-gray-800 shadow"
+	class="block group outline-none overflow-hidden bg-gradient-to-br relative from-red-500/50 to-purple-500/50 hover:from-red-500 hover:to-purple-500 focus-within:from-red-500 focus-within:to-purple-500 p-[2px] max-w-lg w-full rounded aspect-[16/14] md:aspect-[16/10] bg-gray-800 shadow"
 >
-	<img src={item.image} class="block w-full h-full transition-transform" alt={item.title} />
+	<img
+		src={item.image}
+		class="block object-cover w-full h-full transition-transform"
+		alt={item.title}
+	/>
 
 	<div
 		class="scale-125 group-hover:scale-100 group-focus-within:scale-100 absolute inset-[2px] flex flex-col items-center justify-center transition-all opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 bg-black/80"

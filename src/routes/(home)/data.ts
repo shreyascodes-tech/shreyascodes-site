@@ -112,7 +112,7 @@ export const showcaseItems = [
 		title: 'Shreyas Mididoddi',
 		subtitle: 'My Portfolio',
 		description:
-			'This is my portfolio website. I built it using Astro and TailwindCSS. This is the website you are currently on :)',
+			'This is my portfolio website. I built it using SvelteKit and TailwindCSS. This is the website you are currently on :)',
 		image: '/img/screenshots/portfolio.png',
 		link: '/',
 		github: 'https://github.com/shreyascodes-tech/shreyascodes-site'
