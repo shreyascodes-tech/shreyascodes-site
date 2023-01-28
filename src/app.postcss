@@ -1,0 +1,35 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	@apply h-full;
+}
+
+body {
+	@apply overflow-y-auto;
+}
+
+.bg-clip-text {
+	-webkit-background-clip: text;
+}
+
+.fade-in {
+	--duration: 500ms;
+
+	animation: fadeIn var(--duration) ease-in-out;
+	--webkit-animation: fadeIn var(--duration) ease-in-out;
+	--moz-animation: fadeIn var(--duration) ease-in-out;
+	--o-animation: fadeIn var(--duration) ease-in-out;
+	--ms-animation: fadeIn var(--duration) ease-in-out;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
