@@ -38,7 +38,7 @@ export const actions: Actions = {
 		}
 
 		cookies.set('admin', 'true', {
-			path: '/admin',
+			path: '/',
 			maxAge: 60 * 60 * 24 * 7,
 			sameSite: 'strict',
 			httpOnly: true,
@@ -55,7 +55,7 @@ export const actions: Actions = {
 		console.log('hi');
 
 		cookies.delete('admin', {
-			path: '/admin'
+			path: '/'
 		});
 		throw redirect(302, '/admin/auth');
 	}

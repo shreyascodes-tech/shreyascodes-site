@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import { each } from 'svelte/internal';
 	import { fade } from 'svelte/transition';
 	import type { ActionData } from '../routes/contact/$types';
 	import { socials } from '../routes/(home)/data';

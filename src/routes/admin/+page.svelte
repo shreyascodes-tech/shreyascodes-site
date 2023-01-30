@@ -12,10 +12,15 @@
 </svelte:head>
 
 <header>
-	<div class="container flex items-center justify-between mx-auto py-4">
+	<div class="container flex items-center mx-auto py-4">
 		<h1 class="text-xl font-bold">Dashboard</h1>
 
-		<form action="/admin/auth?/logout" method="post" use:enhance>
+		<a
+			class="ml-auto px-4 py-3 font-semibold uppercase text-xs outline-none hover:bg-white/20 focus:bg-white/20 focus:ring rounded transition-all duration-75"
+			href="/">Home</a
+		>
+
+		<form class="ml-8" action="/admin/auth?/logout" method="post" use:enhance>
 			<button
 				class="px-4 py-2 text-white bg-gray-700 transition-all hover:bg-gray-600 active:bg-gray-800 active:scale-95 outline-none focus:ring ring-offset-2 ring-offset-gray-900 ring-indigo-600 rounded-md"
 				>Logout</button

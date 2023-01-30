@@ -1,8 +1,13 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	import { openModal } from 'svelte-modals';
+	import type { PageData } from '../$types';
 	import MobileNav from './MobileNav.svelte';
 
-	const links = [
+	let { admin } = $page.data as PageData;
+
+	let links = [
 		{
 			name: 'Home',
 			href: '/'
@@ -18,7 +23,15 @@
 		{
 			name: 'Contact',
 			href: '#contact'
-		}
+		},
+		...(admin
+			? [
+					{
+						name: 'Admin',
+						href: '/admin'
+					}
+			  ]
+			: [])
 	];
 </script>
 
