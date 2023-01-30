@@ -2,40 +2,35 @@
 	import { onMount } from 'svelte';
 	import StarField from './StarField.svelte';
 
-	onMount(() => {
-		const heroEl = document.querySelector('#hero') as HTMLElement;
-		const mainEl = document.querySelector('#main') as HTMLElement;
-		const heaerEl = document.querySelector('#header') as HTMLElement;
+	let hero: HTMLDivElement;
+	let header: HTMLElement;
 
-		const headerHeight = heaerEl.offsetHeight;
-		mainEl.style.height = `calc(100vh - ${headerHeight}px)`;
-		heroEl.style.top = headerHeight - window.innerHeight + 'px';
+	onMount(() => {
+		hero.style.height = window.innerHeight + 'px';
+
+		let timeout: any;
+		timeout = setTimeout(() => {
+			const headerHeight = header.offsetHeight;
+			hero.style.height = window.innerHeight - headerHeight + 'px';
+		}, 1000);
 
 		const resizeListener = () => {
-			const headerHeight = heaerEl.offsetHeight;
-			mainEl.style.height = `calc(100vh - ${headerHeight}px)`;
-			heroEl.style.top = headerHeight - window.innerHeight + 'px';
+			const headerHeight = header.offsetHeight;
+			hero.style.height = window.innerHeight - headerHeight + 'px';
 		};
 
 		window.addEventListener('resize', resizeListener);
 
-		const scrollListener = () => {
-			const scrollY = window.scrollY;
-			heaerEl.classList.toggle('header-top', scrollY > window.innerHeight);
-		};
-
-		window.addEventListener('scroll', scrollListener);
-
 		return () => {
+			clearTimeout(timeout);
 			window.removeEventListener('resize', resizeListener);
-			window.removeEventListener('scroll', scrollListener);
 		};
 	});
 </script>
 
-<div id="hero" class="sticky z-50 bg-black fade-in">
+<div bind:this={hero} class="bg-black fade-in transition-all">
 	<StarField />
-	<main id="main" class="relative flex flex-col items-center justify-center h-screen text-center">
+	<main class="relative flex flex-col items-center justify-center h-full text-center">
 		<h1
 			class="text-6xl font-bold leading-normal text-transparent uppercase bg-gradient-to-br bg-clip-text from-red-500 to-purple-500"
 		>
@@ -46,21 +41,18 @@
 			🧑‍💻 Tech enthusiast and a Passionate web developer 🚀
 		</p>
 	</main>
-	<header
-		id="header"
-		class="w-full transition-all border-b-2 border-gray-800 bg-gray-900/10 z-100 backdrop-blur-sm max-h-min px-6 md:px-0"
-	>
-		<div class="container flex py-6 mx-auto">
-			<strong>Shreyas Mididoddi</strong>
-		</div>
-	</header>
 </div>
 
-<style lang="postcss">
-	:global(.header-top) {
-		@apply bg-gray-900/60;
-	}
+<header
+	bind:this={header}
+	class="w-full sticky top-0 transition-all border-b-2 border-gray-800 bg-gray-900/80 z-[100] backdrop-blur-sm max-h-min px-6 md:px-0"
+>
+	<div class="container flex py-6 mx-auto">
+		<strong>Shreyas Mididoddi</strong>
+	</div>
+</header>
 
+<style lang="postcss">
 	h1::first-letter {
 		@apply text-white;
 	}

@@ -25,7 +25,7 @@
 		</p>
 	</div>
 
-	<div class="relative flex flex-wrap items-center justify-center w-full gap-8">
+	<div class="flex flex-wrap items-center justify-center w-full gap-8">
 		{#each showcaseItems as item}
 			<ShowcaseCard {item} />
 		{/each}

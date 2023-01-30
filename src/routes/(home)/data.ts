@@ -142,7 +142,14 @@ export const showcaseItems = [
 		description:
 			"I built this website in a hackathon. It's a music streaming website. I built it using Astro and TailwindCSS",
 		image: '/img/screenshots/hyh-music.png',
-		link: 'https://hyh-music.deno.dev/',
+		form: {
+			action: 'https://hyh-music.deno.dev/api/login',
+			method: 'POST',
+			data: [
+				['email', 'test@test.com'],
+				['password', '12345678']
+			]
+		},
 		github: 'https://github.com/shreyascodes-tech/hyh-music'
 	}
 ];
