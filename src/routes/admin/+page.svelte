@@ -12,7 +12,7 @@
 </svelte:head>
 
 <header>
-	<div class="container flex items-center mx-auto py-4">
+	<div class="container flex items-center mx-auto p-4">
 		<h1 class="text-xl font-bold">Dashboard</h1>
 
 		<a
