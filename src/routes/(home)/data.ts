@@ -113,7 +113,7 @@ export const showcaseItems = [
 		subtitle: 'My Portfolio',
 		description:
 			'This is my portfolio website. I built it using SvelteKit and TailwindCSS. This is the website you are currently on :)',
-		image: '/img/screenshots/portfolio.png',
+		image: '/img/screenshots/portfolio.webp',
 		link: '/',
 		github: 'https://github.com/shreyascodes-tech/shreyascodes-site'
 	},
@@ -122,7 +122,7 @@ export const showcaseItems = [
 		subtitle: 'A Deno server framework',
 		description:
 			"This is a Deno web framework that I made. It's a work in progress. I built the framework itself and also the doocs website using react and TailwindCSS.",
-		image: '/img/screenshots/deserve.jpeg',
+		image: '/img/screenshots/deserve.webp',
 		link: 'https://deserve.deno.dev/',
 		github: 'https://github.com/shreyascodes-tech/deserve'
 	},
@@ -131,7 +131,7 @@ export const showcaseItems = [
 		subtitle: 'The Flutter Framework for Production',
 		description:
 			"I built the website for Filledstacks. It's a Flutter framework that helps you build production ready apps. I built the homepage using react and TailwindCSS.",
-		image: '/img/screenshots/stacked.png',
+		image: '/img/screenshots/stacked.webp',
 		link: 'https://stacked.filledstacks.com/',
 		github: 'https://github.com/Filledstacks/stacked'
 	},
@@ -141,7 +141,7 @@ export const showcaseItems = [
 		subtitle: 'A Music app 🎵',
 		description:
 			"I built this website in a hackathon. It's a music streaming website. I built it using Astro and TailwindCSS",
-		image: '/img/screenshots/hyh-music.png',
+		image: '/img/screenshots/hyh-music.webp',
 		form: {
 			action: 'https://hyh-music.deno.dev/api/login',
 			method: 'POST',
