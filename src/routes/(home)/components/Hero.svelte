@@ -28,7 +28,7 @@
 	});
 </script>
 
-<div bind:this={hero} class="bg-black fade-in transition-all">
+<div bind:this={hero} class="bg-black h-screen fade-in transition-all">
 	<StarField />
 	<main class="relative flex flex-col items-center justify-center h-full text-center">
 		<h1
