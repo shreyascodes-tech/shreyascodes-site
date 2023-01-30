@@ -49,7 +49,7 @@
 		class="absolute w-12 h-12 bottom-4 right-4 focus-within:ring ring-blue-700 rounded-lg outline-none opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity hover:opacity-100 focus:opacity-100"
 	>
 		<a href={item.github} class="outline-none">
-			<img src="/img/github_logo.svg" alt="" />
+			<img src="/img/github_logo.svg" alt="{item.title} - Github" />
 		</a>
 	</div>
 </div>
