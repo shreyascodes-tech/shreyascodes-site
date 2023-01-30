@@ -1,22 +1,26 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Header from './Header.svelte';
 	import StarField from './StarField.svelte';
 
 	let hero: HTMLDivElement;
 	let header: HTMLElement;
 
 	onMount(() => {
+		const headerHeight = header.offsetHeight;
 		hero.style.height = window.innerHeight + 'px';
+		document.documentElement.style.scrollPaddingTop = headerHeight + 'px';
 
 		let timeout: any;
 		timeout = setTimeout(() => {
-			const headerHeight = header.offsetHeight;
 			hero.style.height = window.innerHeight - headerHeight + 'px';
+			document.documentElement.style.scrollPaddingTop = headerHeight + 'px';
 		}, 1000);
 
 		const resizeListener = () => {
 			const headerHeight = header.offsetHeight;
 			hero.style.height = window.innerHeight - headerHeight + 'px';
+			document.documentElement.style.scrollPaddingTop = headerHeight + 'px';
 		};
 
 		window.addEventListener('resize', resizeListener);
@@ -47,9 +51,7 @@
 	bind:this={header}
 	class="w-full sticky top-0 transition-all border-b-2 border-gray-800 bg-gray-900/80 z-[100] backdrop-blur-sm max-h-min px-6 md:px-0"
 >
-	<div class="container flex py-6 mx-auto">
-		<strong>Shreyas Mididoddi</strong>
-	</div>
+	<Header />
 </header>
 
 <style lang="postcss">

@@ -13,6 +13,7 @@
 <Hero />
 <section
 	class="container flex flex-col items-center min-h-screen gap-12 px-4 py-8 mx-auto text-center justify-evenly"
+	id="projects"
 >
 	<div>
 		<h2
@@ -34,6 +35,7 @@
 <div class="bg-gray-800">
 	<section
 		class="container flex flex-col items-center min-h-screen gap-16 justify-center px-4 py-8 mx-auto text-center"
+		id="tools"
 	>
 		<div>
 			<h2
@@ -51,6 +53,7 @@
 </div>
 <section
 	class="container flex flex-col items-center min-h-screen gap-16 justify-center px-4 py-8 mx-auto text-center"
+	id="contact"
 >
 	<ContactForm />
 </section>
