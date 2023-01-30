@@ -153,3 +153,21 @@ export const showcaseItems = [
 		github: 'https://github.com/shreyascodes-tech/hyh-music'
 	}
 ];
+
+export const socials = [
+	{
+		title: 'Github',
+		href: 'https://giuthub.com/shreyascodes-tech',
+		icon: icon('github', 'original')
+	},
+	{
+		title: 'Twitter',
+		href: 'https://twitter.com/shreyassanthu77',
+		icon: icon('twitter', 'original')
+	},
+	{
+		title: 'mail',
+		href: 'mailto:contact@shreyascodes.tech',
+		icon: '/img/icons/mail.svg'
+	}
+];

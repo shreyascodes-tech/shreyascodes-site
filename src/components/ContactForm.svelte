@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { each } from 'svelte/internal';
 	import { fade } from 'svelte/transition';
 	import type { ActionData } from '../routes/contact/$types';
+	import { socials } from '../routes/(home)/data';
 
 	export let form: ActionData | undefined = undefined;
 </script>
@@ -15,6 +17,13 @@
 	<p class="text-xl font-medium text-gray-100">
 		to build websites that are fast, beautiful and easy to use
 	</p>
+	<div class="flex space-x-8 mt-4 flex-wrap items-center justify-center">
+		{#each socials as { title, href, icon }}
+			<a {href} class="outline-none focus:ring ring-blue-700 p-3 bg-gray-200 rounded-lg">
+				<img src={icon} class="w-8 aspect-square" alt={title} />
+			</a>
+		{/each}
+	</div>
 </div>
 
 <form
